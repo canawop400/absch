@@ -92,8 +92,8 @@ Gray        : #1D1E26
 
 #content {
 	display: flex;
-
 	flex-direction: column;
+
 	align-items: center;
 
 	width: 90vw;
@@ -105,10 +105,13 @@ Gray        : #1D1E26
 	justify-content: center;
 	align-items: center;
 
-	margin-top: 20px;
+	padding: 15px 10px 20px 10px;
 
-	width: 90vw;
-	height: 10vh;
+	width: 85vw;
+	height: 8vh;
+
+
+
 }
 
 #page-title:before, #page-title:after {
@@ -131,7 +134,7 @@ Gray        : #1D1E26
 	justify-content: center;
 	align-items: center;
 
-	height: 90vh;
+	height: 88vh;
 	width: 90vw;
 }	
 
@@ -148,10 +151,10 @@ Gray        : #1D1E26
 
 	gap: 1.5em;
 
-	width: 90%;
-	height: 95%;
+	width: 81vw;
+	height: 100vh;
 
-	overflow-x: hidden;
+	overflow-x: auto;
 	overflow-y: auto;
 }
 
@@ -161,7 +164,7 @@ Gray        : #1D1E26
 
 	align-items: center;
 
-	width: 1fr;
+	width: 22em;
 	height: 34em;
 
 	border-radius: 10px;
