@@ -1,0 +1,202 @@
+/*
+Color palette
+
+Green       : #8AFF80
+Soft orange : #FFCA80
+Pink        : #FF80BF
+Blue        : #9580FF
+Orange      : #FF9580
+Yellow      : #FFFF80
+Black       : #15171B
+Gray        : #1D1E26
+*/
+
+
+
+							/* General stuff */
+
+* {
+	padding: 0px;
+	margin: 0px;
+
+	color: white;
+	font-family: Consolas;
+}
+
+
+#main {
+	display: flex;
+
+	width: 100vw;
+	height: 100vh;
+
+	background-color: #1D1E26;
+}
+
+
+
+/* Sidebar */
+
+#sidebar {
+	width: 10vw;
+	height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+
+	justify-content: space-around;
+	align-items: center;
+
+	background-color: #15171B;
+}
+
+#logo {
+	width: 140px;
+}
+
+#app-logo {
+	padding-top: 20px;
+}
+
+.separator {
+	width: 80%;
+	height: 0.2em;
+
+	border-radius: 50px;
+
+	background-color: #9580FF;
+}
+
+#icons {
+	height: 55%;
+
+	display: flex;
+	flex-direction: column;
+
+	justify-content: space-around;
+}
+
+.icon {
+	width: 3em;
+	height: 3em;
+}
+
+#sidebar:last-child {
+	border: 1px solid red;
+}
+
+
+
+
+/* Page content */
+
+#content {
+	display: flex;
+
+	flex-direction: column;
+	align-items: center;
+
+	width: 90vw;
+}
+
+#page-title {
+	display: flex;
+	
+	justify-content: center;
+	align-items: center;
+
+	margin-top: 20px;
+
+	width: 90vw;
+	height: 10vh;
+}
+
+#page-title:before, #page-title:after {
+	content: "";
+
+	width: 10px;
+	height: 10px;
+
+	margin: 15px;
+
+	background-color: #8AFF80;
+
+	border-radius: 100%;
+}
+
+#page-content {
+	display: flex;
+	flex-direction: column;
+
+	justify-content: center;
+	align-items: center;
+
+	height: 90vh;
+	width: 90vw;
+}	
+
+
+
+
+
+							/* News */
+
+#news-wrapper {
+	display: grid;
+
+	grid-template-columns: repeat(3, 1fr);
+
+	gap: 1.5em;
+
+	width: 90%;
+	height: 95%;
+
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.new {
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+
+	width: 1fr;
+	height: 34em;
+
+	border-radius: 10px;
+	background-color: #15171B;
+}
+
+.new-image {
+	width: 22em;
+	height: 15em;
+
+	border-radius: 10px;
+	/*background-color: #FFFF80;*/
+}
+
+.new-text-container {
+	display: flex;
+	flex-direction: column;
+
+	justify-content: space-around;
+	align-items: center;
+
+	height: 19em;
+}
+
+.new-title {
+	text-align: center;
+}
+
+.new-date {
+	font-size: 13px;
+}
+
+.new-text {
+	text-align: center;
+	box-sizing: border-box;
+
+	padding: 10px;
+}
