@@ -15,6 +15,10 @@ Gray        : #1D1E26
 
 							/* General stuff */
 
+html {
+	font-size: 1.172vw;
+}
+
 * {
 	padding: 0px;
 	margin: 0px;
@@ -38,8 +42,8 @@ Gray        : #1D1E26
 /* Sidebar */
 
 #sidebar {
-	width: 10vw;
-	height: 100vh;
+	width: 8rem;
+	height: 40.6rem;
 
 	display: flex;
 	flex-direction: column;
@@ -51,24 +55,24 @@ Gray        : #1D1E26
 }
 
 #logo {
-	width: 140px;
+	width: 8rem;
 }
 
 #app-logo {
-	padding-top: 20px;
+	padding-top: 1rem;
 }
 
 .separator {
-	width: 80%;
-	height: 0.2em;
+	width: 6rem;
+	height: 0.3rem;
 
-	border-radius: 50px;
+	border-radius: 1rem;
 
 	background-color: #9580FF;
 }
 
 #icons {
-	height: 55%;
+	height: 20rem;
 
 	display: flex;
 	flex-direction: column;
@@ -77,15 +81,9 @@ Gray        : #1D1E26
 }
 
 .icon {
-	width: 3em;
-	height: 3em;
+	width: 3rem;
+	height: 3rem;
 }
-
-#sidebar:last-child {
-	border: 1px solid red;
-}
-
-
 
 
 /* Page content */
@@ -105,26 +103,23 @@ Gray        : #1D1E26
 	justify-content: center;
 	align-items: center;
 
-	padding: 15px 10px 20px 10px;
+	padding: 1rem;
 
 	width: 85vw;
 	height: 8vh;
-
-
-
 }
 
 #page-title:before, #page-title:after {
 	content: "";
 
-	width: 10px;
-	height: 10px;
+	width: 0.7rem;
+	height: 0.7rem;
 
-	margin: 15px;
+	margin: 1rem;
 
 	background-color: #8AFF80;
 
-	border-radius: 100%;
+	border-radius: 0.7rem;
 }
 
 #page-content {
@@ -149,7 +144,7 @@ Gray        : #1D1E26
 
 	grid-template-columns: repeat(3, 1fr);
 
-	gap: 1.5em;
+	gap: 1.5rem;
 
 	width: 81vw;
 	height: 100vh;
@@ -164,16 +159,16 @@ Gray        : #1D1E26
 
 	align-items: center;
 
-	width: 22em;
-	height: 34em;
+	width: 22rem;
+	height: 34rem;
 
 	border-radius: 10px;
 	background-color: #15171B;
 }
 
 .new-image {
-	width: 22em;
-	height: 15em;
+	width: 22rem;
+	height: 15rem;
 
 	border-radius: 10px;
 	/*background-color: #FFFF80;*/
@@ -186,7 +181,7 @@ Gray        : #1D1E26
 	justify-content: space-around;
 	align-items: center;
 
-	height: 19em;
+	height: 19rem;
 }
 
 .new-title {
@@ -194,7 +189,7 @@ Gray        : #1D1E26
 }
 
 .new-date {
-	font-size: 13px;
+	font-size: 0.9vw;
 }
 
 .new-text {
@@ -202,4 +197,14 @@ Gray        : #1D1E26
 	box-sizing: border-box;
 
 	padding: 10px;
+}
+
+
+/* Crear noticias */
+
+#form-container {
+	width: 40rem;
+	height: 32rem;
+
+	background-color: #15171B;
 }
