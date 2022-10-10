@@ -48,14 +48,38 @@
 			</div>
 
 
+			<div>
+				<a href="/noticias/crear/">
+					<img src="/static/images/plus.png" class="floating-button">
+				</a>
+			</div>
+
 
 			<div id="content">
+
 				<div id="page-title">
 					<h1>Noticias</h1>
 				</div>
 
 				<div id="page-content">
-					<div id="news-wrapper"></div>
+					<div id="news-wrapper">
+						{% for new in news %}
+							<div class="new">
+								<div class="new-image"></div>
+							
+								<div class="new-text-container">
+									<div class="new-title">
+										<h3> {{ new["title"] }} </h3>
+										<span class="new-date"> {{ new["created"] }} </span>
+									</div>
+
+									<div class="new-text">
+										<p> {{ new["content"] }} </p>
+									</div>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
 				</div>
 			</div>
 		</div>		

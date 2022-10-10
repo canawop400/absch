@@ -1,53 +1,82 @@
 
-const colors = ["#8AFF80", "#FFCA80", "#FF80BF", "#9580FF", "#FF9580", "#FFFF80"];
-const newsWrapper = document.getElementById("news-wrapper");
+
+function index() {
+	console.log("index");
+}
 
 
-// TODO: Mejorar este codigo
-
-function generateNews() {
-	// Generate dummy news
-
-	for (i = 0; i < 9; i++){
-		let newDiv = document.createElement("div");
-		newDiv.classList.add("new");
-
-		let newImage = document.createElement("div");
-		newImage.classList.add("new-image");
-
-		newImage.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-
-		let newTextContainer = document.createElement("div");
-		newTextContainer.classList.add("new-text-container");
-
-		let newTitle = document.createElement("div");
-		newTitle.classList.add("new-title");
-
-		let newH3 = document.createElement("h3");
-		newH3.innerHTML = "Noticia";
-
-		let newDate = document.createElement("span");
-		newDate.classList.add("new-date")
-		newDate.innerHTML = "10/12/2022";
-
-		let newText = document.createElement("p");
-		newText.classList.add("new-text");
-		newText.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eius iure vitae facilis dolor repudiandae sit ipsam rerum blanditiis est, suscipit ratione omnis, placeat voluptates maxime quae temporibus accusantium non.";
+function procedures() {
+	console.log("procedures");
+}
 
 
-		newTitle.appendChild(newH3);
-		newTitle.appendChild(newDate);
+function news() {
+	// Executes when /noticias/ is loaded
 
-		newTextContainer.appendChild(newTitle);
-		newTextContainer.appendChild(newText);
+	// Add colors to the images
+	const colors = ["#8AFF80", "#FFCA80", "#FF80BF", "#9580FF", "#FF9580", "#FFFF80"];
+	const images = [...document.getElementsByClassName("new-image")];
 
-		newDiv.appendChild(newImage);
-		newDiv.appendChild(newTextContainer);
+	images.forEach((image) => {
+		image.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+	});
 
-		newsWrapper.appendChild(newDiv);
-	}
+	// Add functionality to the delete new button
+
+}
+
+
+function createNews() {
+	const sendButton = document.getElementById("send-button");
+
+	sendButton.addEventListener("click", (event) => {
+		let title = document.getElementById("new-title").value;
+		let content = document.getElementById("new-content").value;
+
+		const xhttp = new XMLHttpRequest();
+
+		xhttp.onload = function () {
+
+			// Idea: Mostrar una notificacion como un pop-pup desde el lateral derecho diciendo que se creo la noticia
+			// Desabilitar el boton de enviar noticia hasta que se muestra la notificacion para evitar subirla 2 veces
+			// Debe ser claro que el boton no puede pulsarse otra vez mientras se espera por la respuesta del servidor
+
+			if (this.status == 200) {
+				console.log("Noticia creada");
+			} else {
+				console.log(this.responseText);
+			}
+		}
+
+		xhttp.open("POST", "/api/news/");
+		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		xhttp.send("title=" + title + "&content=" + content);
+	});
+
 }
 
 
 
-generateNews();
+(() => {
+	// Main function
+
+	switch (window.location.pathname) {
+		case "/":
+			index();
+			break;
+		
+		case "/tramites/":
+			procedures();
+			break;
+
+		case "/noticias/":
+			news()
+			break;
+
+		case "/noticias/crear/":
+			createNews();
+			break;
+
+	}
+
+})();

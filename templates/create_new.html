@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
@@ -52,14 +53,28 @@
 
 
 			<div id="content">
-				<div id="page-title">
+				<div id="page-title" class="has-decorator">
 					<h1>Crear noticia</h1>
 				</div>
 
 				<div id="page-content">
-					<div id="form-container">
+					<form action="/api/news/" method="POST" id="form-container">
 						
-					</div>
+						<div class="form-field-container">
+							<label for="new-title" class="form-label">Titulo</label>
+							<input type="text" id="new-title" name="new-title" class="form-field">
+						</div>
+
+						<div class="form-field-container">
+							<label for="new-content" class="form-label">Contenido</label>
+							<textarea type="text" id="new-content" name="new-content" class="form-field"></textarea>
+						</div>
+
+						<div id="form-buttons-container">
+							<a href="/noticias/" id="cancel-button" class="red form-button">Cancelar</a>
+							<div id="send-button" class="green form-button">Enviar</div>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>		
@@ -86,6 +101,6 @@
 
 		</script> -->
 
-
+		<script src="/static/scripts/script.js"></script>
 	</body>
 </html>

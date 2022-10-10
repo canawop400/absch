@@ -38,6 +38,10 @@ html {
 }
 
 
+a {
+	text-decoration: none;
+}
+
 
 /* Sidebar */
 
@@ -199,12 +203,92 @@ html {
 	padding: 10px;
 }
 
+.floating-button {
+	position: absolute;
+
+	margin: 1rem 0rem 0rem 73.4rem;
+
+	width: 3rem;
+	height: 3rem;
+}
+
 
 /* Crear noticias */
 
 #form-container {
+	display: flex;
+	flex-direction:column;
+
+	justify-content: center;
+	align-items: center;
+
+	gap: 1rem;
+
 	width: 40rem;
 	height: 32rem;
 
 	background-color: #15171B;
+	border-radius: 1rem;
+}
+
+.form-field-container {
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+
+	gap: 0.5rem;
+}
+
+.form-label {
+	font-size: 1.5rem;
+}
+
+.form-field {
+	width: 25rem;
+
+	text-align: center;
+	font-size: 1rem;
+
+	background-color: #1D1E26;
+	border: 0.1rem solid #9580FF;
+	border-radius: 0.5rem;
+}
+
+#new-content {
+	height: 20rem;
+}
+
+#form-buttons-container {
+	display: flex;
+
+	gap: 2rem;
+}
+
+.form-button {
+	padding: 0.5rem;
+
+	cursor: pointer;
+}
+
+.green {
+	color: #8AFF80;
+	border: 1px solid #8AFF80;
+}
+
+.green:hover {
+	color: black;
+	background-color: #8AFF80;
+	box-shadow: 0 0 0.2rem #8AFF80;
+}
+
+.red {
+	color: #FF9580;
+	border: 1px solid #FF9580;
+}
+
+.red:hover {
+	color: black;
+	background-color: #FF9580;
+	box-shadow: 0 0 0.2rem #FF9580;
 }
