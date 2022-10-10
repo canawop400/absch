@@ -46,8 +46,8 @@ a {
 /* Sidebar */
 
 #sidebar {
-	width: 8rem;
-	height: 40.6rem;
+	width: 10vw;
+	height: 100vh;
 
 	display: flex;
 	flex-direction: column;
